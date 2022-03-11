@@ -1,0 +1,49 @@
+<div>
+  <mat-card style="background-color: darkgrey">
+    <mat-card-header>
+      <mat-card-title>
+        <p> {{albumCreationForm.get('name').value}} </p>
+      </mat-card-title>
+    </mat-card-header>
+
+    <mat-card-content>
+      <form [formGroup]="albumCreationForm" (ngSubmit)="onSaveAlbum()">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input
+            type="text"
+            id="name"
+            formControlName="name"
+            class="form-control">
+        </div>
+        <div class="form-group">
+          <label for="description">Description</label>
+          <textarea id="description"
+                    formControlName="description"
+                    matInput placeholder="My vacation in France ..."
+                    class="form-control">
+          </textarea>
+        </div>
+        <div class="form-group">
+          <button
+            style="margin-top: 5px;"
+            type='button'
+            mat-raised-button
+            [ngStyle]="{backgroundColor: album.backgroundColor}"
+            (click)="onPickColor()">
+            <mat-icon>color_lens</mat-icon>
+          </button>
+        </div>
+        <div>
+          <app-album-photos [album]="album"></app-album-photos>
+        </div>
+        <button style="margin-top: 5px;" class="btn btn-primary" type="submit">Create Album</button>
+        <button style="margin-top: 5px; margin-left: 5px" class="btn btn-danger" type="button" (click)="onClose()">close</button>
+      </form>
+    </mat-card-content>
+
+    <mat-card-footer>
+
+    </mat-card-footer>
+  </mat-card>
+</div>

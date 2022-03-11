@@ -1,0 +1,20 @@
+<div style="background-color: white; margin-top: 1%;">
+  <button [hidden]="hiddeAddButton()" type='button' style="background-color: rgb(14,70,200); margin: 1%" mat-raised-button (click)="onAddPhotos()">Add Photos</button>
+  <button [hidden]="!hiddeAddButton()" type='button' style="background-color: rgb(14,70,200); margin: 1%" mat-raised-button (click)="onEditAlbum()">Edit Album</button>
+
+  <div fxLayout="row wrap" fxLayoutGap="1%" class="scroll">
+      <app-photo-item fxFlex="23%" fxFlexFill
+                      *ngFor="let photoEl of album.photos"
+                      [photo]="photoEl">
+      </app-photo-item>
+  </div>
+  <form style="display: none;">
+    <input
+      id="file"
+      type="file"
+      class="form-control"
+      multiple=""
+      accept="image/*"
+      (change)="onFileChange($event)">
+  </form>
+</div>

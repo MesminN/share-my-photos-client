@@ -1,0 +1,13 @@
+<div>
+  <button (click)="onClose()"><mat-icon>close</mat-icon></button>
+  <carousel
+            [objectFit]="'cover'"
+            [cellWidth]="'100%'"
+            [height]="height"
+            [dots]="true"
+            [loop]="true">
+    <div *ngFor="let photo of photos" class="carousel-cell">
+      <img [src]="photo.imageValue">
+    </div>
+  </carousel>
+</div>

@@ -1,0 +1,18 @@
+/*.photos {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.photo-item {
+  flex: 1 0 19%;
+  margin: 1%;
+  max-width: 25%;
+}*/
+
+div.scroll {
+  min-height:425px;
+  max-height:575px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  text-align: center;
+}

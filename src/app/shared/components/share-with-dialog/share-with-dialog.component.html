@@ -1,0 +1,38 @@
+<div mat-dialog-content>
+      <form [formGroup]="shareForm" (ngSubmit)="onSubmit()">
+        <div formArrayName="emails">
+          <div class="form-group"
+               *ngFor="let emails of emails.controls; let i = index">
+            <label for="email">E-Mail</label>
+            <input
+              type="email"
+              id="email"
+              class="form-control"
+              placeholder="john.doe@gmail.com"
+              [formControlName]="i">
+            <span *ngIf="!emails.valid && emails.touched"
+                  class = "help-block">
+                  Please, enter a valid email!
+            </span>
+          </div>
+        </div>
+        <br>
+        <button mat-raised-button
+                class="btn btn-primary"
+                type="button"
+                (click)="onAddEmail()">
+          Add an other email
+        </button>
+        <br>
+      </form>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onClose()">Close</button>
+  <button
+    (click)="onSubmit()"
+    class="btn btn-primary"
+    type="submit"
+    [disabled]="!shareForm.valid">
+    Share
+  </button>
+</div>

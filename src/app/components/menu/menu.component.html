@@ -1,0 +1,22 @@
+<div class="menu">
+  <ul *ngIf="isAuthenticated">
+    <li routerLink="/"
+        routerLinkActive ="active"
+        [routerLinkActiveOptions]="{exact: true}">
+      <a>Home</a>
+    </li>
+    <li *ngFor="let menu of menus">
+      <a [href]="menu.url"
+      routerLinkActive ="active"
+      [routerLinkActiveOptions]="{exact: true}">{{menu.title}}</a>
+    </li>
+  </ul>
+  <ul class="last">
+    <li *ngIf="isAuthenticated">
+      <a style="cursor: pointer;" (click)="onLogout()">Logout</a>
+    </li>
+    <li *ngIf="!isAuthenticated">
+      <a style="cursor: pointer;" (click)="goToLoginOrSignUp()">Login</a>
+    </li>
+  </ul>
+</div>

@@ -1,0 +1,14 @@
+<div class="row">
+  <div class="col-xs-12">
+    <button style="background-color: rgb(14,70,200);" mat-raised-button (click)="onCreateNewAlbum()">New Album</button>
+  </div>
+</div>
+<hr>
+<div class="albums scroll">
+  <app-album-item
+    class="album-item"
+    *ngFor="let album of albums"
+    [album]="album">
+  </app-album-item>
+</div>
+

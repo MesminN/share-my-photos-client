@@ -1,0 +1,9 @@
+<app-photos-list *ngIf="!isPhotoSelected"></app-photos-list>
+<div class="row" *ngIf="isPhotoSelected">
+  <div class="col-md-5">
+    <app-photos-list></app-photos-list>
+  </div>
+  <div class="col-md-7">
+    <router-outlet></router-outlet>
+  </div>
+</div>

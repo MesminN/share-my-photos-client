@@ -1,0 +1,19 @@
+<mat-card style="background-color: lightgrey">
+  <mat-card-header>
+    <mat-card-title>Pick a color</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <div class=color-wrapper>
+      <app-color-palette [hue]="hue" (color)="color = $event"></app-color-palette>
+      <app-color-slider (color)="hue=$event" style="margin-left:16px"></app-color-slider>
+    </div>
+    <div class="input-wrapper">
+      <span class="text">{{color}}</span>
+      <div class="color-div" [ngStyle]="{'background-color': color || 'white'}"></div>
+    </div>
+    <mat-card-actions>
+      <button mat-raised-button (click)="onCancel()">Cancel</button>
+      <button mat-raised-button [mat-dialog-close]="color" cdkFocusInitial>Ok</button>
+    </mat-card-actions>
+  </mat-card-content>
+</mat-card>

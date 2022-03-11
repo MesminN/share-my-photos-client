@@ -1,0 +1,46 @@
+.menu ul li{
+  float: left;
+  padding: 0px 30px;
+  border-right: 2px solid antiquewhite;
+  list-style: none;
+  margin-top: 25px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.menu ul li a{
+  color: white;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 17px;
+  -webkit-transition: font-size 0.3s ease;
+  -moz-transition: font-size 0.3s ease;
+  -o-transition: font-size 0.3s ease;
+  -ms-transition: font-size 0.3s ease;
+  transition: font-size 0.3s ease;
+}
+
+a:hover {
+  font-size: 20px;
+  font-weight: bold;
+  color: ghostwhite;
+}
+
+.active {
+  font-size: 20px;
+  font-weight: bold;
+  color: lightgrey;
+}
+
+.menu ul li:last-child{
+  border-right: none;
+}
+
+.menu{
+  display: flex;
+  background: linear-gradient(rgb(24,119,242), darkblue);
+}
+
+.last {
+  margin-left: auto;
+}

@@ -1,0 +1,16 @@
+.albums {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.album-item {
+  flex: 1 0 48%;
+  margin: 1%;
+}
+
+div.scroll {
+  max-height: 575px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  text-align: center;
+}

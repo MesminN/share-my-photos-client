@@ -1,0 +1,13 @@
+.footer{
+  height: 60px;
+  background: linear-gradient(rgb(24,119,242), darkblue);
+  background: -webkit-linear-gradient(rgb(24,119,242), darkblue);
+  background: -o-linear-gradient(rgb(24,119,242), darkblue);
+  background: -moz-linear-gradient(rgb(24,119,242), darkblue);
+  padding: 10px 30px;
+  margin-top: 15px
+}
+
+p {
+  color: ghostwhite;
+}
